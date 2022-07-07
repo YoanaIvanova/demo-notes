@@ -31,7 +31,7 @@ const NoteFormModal = (props) => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Add/Edit Note</Modal.Title>
+                    <Modal.Title>Add Note</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form className="add-note-form">

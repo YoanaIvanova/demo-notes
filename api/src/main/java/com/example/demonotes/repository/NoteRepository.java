@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 @RepositoryRestResource
-@CrossOrigin
 public interface NoteRepository extends PagingAndSortingRepository<Note, Long> {
 
     List<Note> findByTitle(@Param("title") String title);
