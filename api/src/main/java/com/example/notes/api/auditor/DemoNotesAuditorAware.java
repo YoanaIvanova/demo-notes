@@ -1,4 +1,4 @@
-package com.example.demonotes.auditor;
+package com.example.notes.api.auditor;
 
 import org.springframework.data.domain.AuditorAware;
 

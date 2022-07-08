@@ -5,14 +5,14 @@ import { BsFillTrashFill, BsStar, BsStarFill } from 'react-icons/bs';
 
 const NoteCard = (props) => {
     const deleteNote = (url) => {
-        axios.delete(url).then(res => {
+        axios.delete(url.replace('http://localhost', 'api')).then(res => {
             console.log(res);
             props.getNotes();
         });
     };
 
     const flagNote = (url) => {
-        axios.put(url, {
+        axios.put(url.replace('http://localhost', 'api'), {
             "title": props.note.title,
             "content": props.note.content,
             "important": !props.note.important

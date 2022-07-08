@@ -16,7 +16,7 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   const getNotes = () => {
-    axios.get("http://localhost:8080/notes?sort=createdDate,desc").then(res => {
+    axios.get('/api/notes').then(res => {
       setNotes(res.data._embedded.notes);
     });
   }

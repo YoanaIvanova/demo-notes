@@ -14,7 +14,7 @@ const NoteFormModal = (props) => {
     const handleShow = () => setShow(true);
 
     const createNote = () => {
-        axios.post("http://localhost:8080/notes", {
+        axios.post('/api/notes', {
             "title": title,
             "content": content
         }).then(res => {

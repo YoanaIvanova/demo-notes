@@ -1,4 +1,4 @@
-package com.example.demonotes.model;
+package com.example.notes.api.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

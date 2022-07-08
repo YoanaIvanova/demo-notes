@@ -1,7 +1,7 @@
 version: "3"
 services:
   mysqldb:
-    image: mysql:latest
+    image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=$MYSQL_PASSWORD
       - MYSQL_DATABASE=notesdb
@@ -21,7 +21,7 @@ services:
       - mysqldb
     ports:
       - "8080:8080"
-  client:
+  frontend:
     environment:
       - WDS_SOCKET_PORT=0
     build:
