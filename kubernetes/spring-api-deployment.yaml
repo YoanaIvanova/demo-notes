@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-deployment
+  name: spring-api-deployment
 spec:
   replicas: 1
   selector:
@@ -13,13 +13,13 @@ spec:
         component: api
     spec:
       containers:
-        - name: api
-          image: yoanaes/api-notes
+        - name: spring-api
+          image: yoanaes/notes-api
           ports:
             - containerPort: 8080
           env:
             - name: MYSQL_HOST
-              value: mysqldb-cluster-ip-service
+              value: mysql-cluster-ip-service
             - name: MYSQL_PORT
               value: "3306"
             - name: MYSQL_DATABASE

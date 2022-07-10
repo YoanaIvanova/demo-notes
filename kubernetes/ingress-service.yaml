@@ -13,13 +13,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-cluster-ip-service
+                name: react-client-cluster-ip-service
                 port:
                   number: 3000
           - path: /api/?(.*)
             pathType: Prefix
             backend:
               service:
-                name: api-cluster-ip-service
+                name: spring-api-cluster-ip-service
                 port:
                   number: 8080

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
+  name: react-client-deployment
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,7 @@ spec:
         component: web
     spec:
       containers:
-        - name: frontend
-          image: yoanaes/frontend-client
+        - name: react-client
+          image: yoanaes/notes-client
           ports:
             - containerPort: 3000
