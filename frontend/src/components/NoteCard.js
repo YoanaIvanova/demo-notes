@@ -5,20 +5,20 @@ import { BsFillTrashFill, BsStar, BsStarFill } from 'react-icons/bs';
 
 const NoteCard = (props) => {
     const deleteNote = (url) => {
-        axios.delete(url.replace('http://localhost', 'api')).then(res => {
-            console.log(res);
+        let noteId = url.split("/").pop();
+        axios.delete(`${process.env.REACT_APP_API_ENDPOINT}/${noteId}`).then(res => {
             props.getNotes();
         });
     };
 
     const flagNote = (url) => {
-        axios.put(url.replace('http://localhost', 'api'), {
+        let noteId = url.split("/").pop();
+        axios.put(`${process.env.REACT_APP_API_ENDPOINT}/${noteId}`, {
             "title": props.note.title,
             "content": props.note.content,
             "important": !props.note.important
         },
         ).then((res) => {
-            console.log(res);
             props.getNotes();
         });
     };

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: react-client-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       component: web

@@ -14,7 +14,7 @@ const NoteFormModal = (props) => {
     const handleShow = () => setShow(true);
 
     const createNote = () => {
-        axios.post('/api/notes', {
+        axios.post(process.env.REACT_APP_API_ENDPOINT, {
             "title": title,
             "content": content
         }).then(res => {

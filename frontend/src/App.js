@@ -16,7 +16,7 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   const getNotes = () => {
-    axios.get('/api/notes').then(res => {
+    axios.get(process.env.REACT_APP_API_ENDPOINT).then(res => {
       setNotes(res.data._embedded.notes);
     });
   }
