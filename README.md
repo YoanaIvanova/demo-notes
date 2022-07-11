@@ -38,6 +38,8 @@ To access the React frontend, go to http://localhost or just type *localhost* in
 
 To access the Spring Boot REST API, go to http://localhost/api/notes
 
+***Note:** This has been tested with Docker Desktop's Kubernetes cluster. For Minikube, you'll probably need to use Minikube's IP instead of "localhost".*
+
 ## Run using Docker Compose
 
 **Prerequisites**
