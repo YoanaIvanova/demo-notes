@@ -43,8 +43,8 @@ To access the Spring Boot REST API, go to http://localhost/api/notes
 ## Run using Docker Compose
 
 **Prerequisites**
-* Open *docker-compose.yml*. There are two variables: $MYSQL_USERNAME and $MYSQL_PASSWORD. These will be used when accessing the MySQL database. You can:
-    * Either edit the *docker-compose.yml* file and change all occurances of these variables (I suggest you use "root" for the username and any arbitrary value for the password)
+* Take a look at *docker-compose.yml* and *application.properties*. There are two variables: $MYSQL_USERNAME and $MYSQL_PASSWORD. These will be used when accessing the MySQL database. You can:
+    * Either edit the *docker-compose.yml* and *application.properties* files and change all occurances of these variables (I suggest you use "root" for the username and any arbitrary value for the password)
     * Or create these two environment variables (MYSQL_USERNAME and MYSQL_PASSWORD) on your Docker host system
 
 **Running the containers using Docker Compose**
